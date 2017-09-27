@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body onload="fetchBookmark()">
+        <h2 class="text-center">My youtube songs</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="jumbotron">
+                        <form id="form">
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="form-group  col-md-8">
+                                    <label for="siteName">Song name</label>
+                                    <input type="text" id="siteName" class="form-control">
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="form-group col-md-8">
+                                    <label for="siteUrl">Song URL</label>
+                                    <input type="text" id="siteUrl" class="form-control">
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="form-group col-md-8">
+                                    <button type="button" id="addButton" class="btn btn-success btn-lg">Add bookmark</button>
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                        </form>
+
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <div id="bookmark">
+
+                                </div>
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>    
+
+
+                        <div id="listingTable"></div>
+
+
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination">
+                                <li onclick="prevPage()" id="btn_prev" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </li>
+                                <li><span id="page"></span></li>
+                                <li onclick="nextPage()" id="btn_next" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>              
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
